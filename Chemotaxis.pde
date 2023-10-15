@@ -20,16 +20,18 @@ void draw(){
 
 class Bubble{
   int myX,myY,myZ;
+  int myColor;
   Bubble(){
     myX=150;
     myY=300;
     myZ=15;
+    myColor = color(237,243,255);
   }
   void move(){
     myX=myX+(int)(Math.random()*150-70);
     myY=myY-(int)(Math.random()*50);
     myZ=myZ+(int)(Math.random()*4);
-    if(myY<=-100){
+    if(myY<=-200){
       myY=300;
       myX=150;
       myZ=15;
@@ -37,7 +39,11 @@ class Bubble{
   }
   void show(){
     strokeWeight(0);
-    fill(237,243,255);
+    if(myY>150){
+      fill(myColor);
+    }else{
+      fill(245,245,255);
+    }
     ellipse(myX,myY,myZ,myZ);
     strokeWeight(1);
     fill(191,191,191);
