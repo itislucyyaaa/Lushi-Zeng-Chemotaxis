@@ -31,7 +31,7 @@ class Bubble{
     myX=myX+(int)(Math.random()*150-70);
     myY=myY-(int)(Math.random()*50);
     myZ=myZ+(int)(Math.random()*4);
-    if(myY<=0){
+    if(myY<=120){
       myY=mouseY;
       myX=mouseX;
       myZ=15;
