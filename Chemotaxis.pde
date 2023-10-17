@@ -31,9 +31,9 @@ class Bubble{
     myX=myX+(int)(Math.random()*150-70);
     myY=myY-(int)(Math.random()*50);
     myZ=myZ+(int)(Math.random()*4);
-    if(myY<=-200){
-      myY=300;
-      myX=150;
+    if(myY<=0){
+      myY=mouseY;
+      myX=mouseX;
       myZ=15;
     }
   }
@@ -56,6 +56,5 @@ class Bubble{
     fill(255,255,255);
     textSize(25);
     text("I am a sink",50,360);
-    
   }
 }
